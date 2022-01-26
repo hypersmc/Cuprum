@@ -2,6 +2,7 @@ package com.jumpwatch.cuprum.common.items;
 
 import com.jumpwatch.cuprum.common.Cuprum;
 import com.jumpwatch.cuprum.common.utils.CuprumConfigCommon;
+import com.jumpwatch.cuprum.common.utils.ThrownStableEnderpearl;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -23,7 +24,7 @@ public class StableEnderP extends Item {
     @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
         ItemStack stack = pPlayer.getMainHandItem();
-        ThrownEnderpearl entity = new ThrownEnderpearl(pLevel, pPlayer);
+        ThrownStableEnderpearl entity = new ThrownStableEnderpearl(pLevel, pPlayer);
         entity.setOwner(pPlayer);
         entity.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 1.5F, 1.0F);
         pLevel.addFreshEntity(entity);
