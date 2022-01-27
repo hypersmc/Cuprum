@@ -1,7 +1,9 @@
 package com.jumpwatch.cuprum.client;
 
 import com.jumpwatch.cuprum.client.model.ThrownStableEnderpearlModel;
+import com.jumpwatch.cuprum.client.model.testModel;
 import com.jumpwatch.cuprum.client.render.ThrownStableEnderpearlRenderer;
+import com.jumpwatch.cuprum.client.render.testRenderer;
 import com.jumpwatch.cuprum.common.Cuprum;
 import com.jumpwatch.cuprum.common.registry.FinalRegistry;
 import net.minecraftforge.api.distmarker.Dist;
@@ -23,11 +25,13 @@ public class Clientsetup {
     public static void onRegisterRenderer(EntityRenderersEvent.RegisterRenderers event){
         LOGGER.info("registering renderes!");
         event.registerEntityRenderer(FinalRegistry.THROWN_STABLE_ENDERPEARL_ENTITY_TYPE.get(), ThrownStableEnderpearlRenderer::new);
+        event.registerEntityRenderer(FinalRegistry.TEST_ENTITY.get(), testRenderer::new);
     }
     @SubscribeEvent
     public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         LOGGER.info("registering models!");
 
         event.registerLayerDefinition(FinalRegistry.THROWN_STABLE_ENDERPEARL_MODEL, ThrownStableEnderpearlModel::createLayer);
+        event.registerLayerDefinition(testModel.test_layer, testModel::createBodyLayer);
     }
 }

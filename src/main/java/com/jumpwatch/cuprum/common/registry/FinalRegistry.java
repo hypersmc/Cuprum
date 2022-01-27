@@ -1,6 +1,7 @@
 package com.jumpwatch.cuprum.common.registry;
 
 import com.jumpwatch.cuprum.common.Cuprum;
+import com.jumpwatch.cuprum.common.entities.testEntity;
 import com.jumpwatch.cuprum.common.items.StableEnderP;
 
 import com.jumpwatch.cuprum.common.utils.ThrownStableEnderpearl;
@@ -9,8 +10,10 @@ import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.*;
@@ -42,5 +45,16 @@ public class FinalRegistry {
     private static <T extends IForgeRegistryEntry<T>> DeferredRegister<T> create(IForgeRegistry<T> registry) {
         return DeferredRegister.create(registry, Cuprum.MOD_ID);
     }
+
+
+
+    //mobs and or animals
+
+    public static final RegistryObject<EntityType<testEntity>> TEST_ENTITY = ENTITIES.register("test", () -> EntityType.Builder.of(testEntity::new, MobCategory.CREATURE)
+            .sized(0.6F, 1.95F)
+            .clientTrackingRange(8)
+            .setShouldReceiveVelocityUpdates(false)
+            .build("test"));
+    public static final RegistryObject<Item> test_egg = ITEMS.register("test", () -> new ForgeSpawnEggItem(TEST_ENTITY, 0xff0000, 0x00ff00, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
 }

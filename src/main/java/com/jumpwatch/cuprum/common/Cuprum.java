@@ -3,6 +3,7 @@ package com.jumpwatch.cuprum.common;
 import com.jumpwatch.cuprum.client.Clientsetup;
 import com.jumpwatch.cuprum.client.render.ThrownStableEnderpearlRenderer;
 import com.jumpwatch.cuprum.common.network.CuprumNetwork;
+import com.jumpwatch.cuprum.common.registry.Attribute;
 import com.jumpwatch.cuprum.common.registry.FinalRegistry;
 import com.jumpwatch.cuprum.common.utils.CuprumConfigCommon;
 import net.minecraftforge.api.distmarker.Dist;
@@ -27,6 +28,7 @@ public class Cuprum
     public static final String MOD_ID = "cuprum";
     public Cuprum() {
         LOGGER.info("Started registering!");
+        Attribute.setup();
         IEventBus modbus = FMLJavaModLoadingContext.get().getModEventBus();
         FinalRegistry.register();
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonsetups);
