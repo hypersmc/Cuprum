@@ -25,6 +25,7 @@ public class StableEnderP extends Item {
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
         ItemStack stack = pPlayer.getMainHandItem();
         ThrownStableEnderpearl entity = new ThrownStableEnderpearl(pLevel, pPlayer);
+
         entity.setOwner(pPlayer);
         entity.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 1.5F, 1.0F);
         pLevel.addFreshEntity(entity);
