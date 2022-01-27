@@ -30,8 +30,13 @@ public class StableEnderP extends Item {
         entity.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 1.5F, 1.0F);
         pLevel.addFreshEntity(entity);
 
-        int dmgVal = stack.getDamageValue() - 1;
-        stack.setDamageValue(dmgVal);
+
+        if (stack.getDamageValue() > 0 || stack.getDamageValue() < CuprumConfigCommon.EnderDurability.get()){
+            stack.setDamageValue(stack.getDamageValue() + 1);
+
+        }else {
+            stack.shrink(1);
+        }
 
         return super.use(pLevel, pPlayer, pUsedHand);
     }
