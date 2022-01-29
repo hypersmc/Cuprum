@@ -66,7 +66,8 @@ public class ThrownStableEnderpearl extends ThrowableItemProjectile {
 
                         entity.teleportTo(event.getTargetX(), event.getTargetY(), event.getTargetZ());
                         entity.resetFallDistance();
-                        entity.hurt(DamageSource.FALL, CuprumConfigCommon.EnderDamage.get());
+
+                        entity.hurt(DamageSource.FALL,  CuprumConfigCommon.GENERAL.EnderDamage.get().floatValue());
                     } //Forge: End
                 }
             } else if (entity != null) {

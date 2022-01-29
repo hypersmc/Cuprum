@@ -20,12 +20,13 @@ import java.util.Random;
 
 public class StableEnderP extends Item {
     public StableEnderP() {
-        super(new Properties().stacksTo(1).defaultDurability(CuprumConfigCommon.EnderDurability.get()).setNoRepair().tab(CreativeModeTab.TAB_MISC));
+        super(new Properties().stacksTo(1).defaultDurability(CuprumConfigCommon.GENERAL.EnderDurability.get()).setNoRepair().tab(CreativeModeTab.TAB_MISC));
 
     }
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
+        pPlayer.getCooldowns().addCooldown(this, CuprumConfigCommon.GENERAL.EnderCooldown.get());
         ItemStack stack = pPlayer.getMainHandItem();
         ThrownStableEnderpearl entity = new ThrownStableEnderpearl(pLevel, pPlayer);
 

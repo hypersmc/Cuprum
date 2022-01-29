@@ -1,21 +1,17 @@
 package com.jumpwatch.cuprum.common;
 
 import com.jumpwatch.cuprum.client.Clientsetup;
-import com.jumpwatch.cuprum.client.render.ThrownStableEnderpearlRenderer;
 import com.jumpwatch.cuprum.common.network.CuprumNetwork;
 import com.jumpwatch.cuprum.common.registry.Attribute;
 import com.jumpwatch.cuprum.common.registry.FinalRegistry;
 import com.jumpwatch.cuprum.common.utils.CuprumConfigCommon;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
@@ -33,7 +29,7 @@ public class Cuprum
         FinalRegistry.register();
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonsetups);
         MinecraftForge.EVENT_BUS.register(this);
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CuprumConfigCommon.SPEC, "cuprum-common.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CuprumConfigCommon.SPEC);
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> modbus.addListener(Clientsetup::init));
 
     }
