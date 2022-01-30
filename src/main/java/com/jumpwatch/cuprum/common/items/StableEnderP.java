@@ -1,6 +1,7 @@
 package com.jumpwatch.cuprum.common.items;
 
 import com.jumpwatch.cuprum.common.Cuprum;
+import com.jumpwatch.cuprum.common.registry.FinalRegistry;
 import com.jumpwatch.cuprum.common.utils.CuprumConfigCommon;
 import com.jumpwatch.cuprum.common.utils.ThrownStableEnderpearl;
 import net.minecraft.resources.ResourceLocation;
@@ -20,8 +21,8 @@ import java.util.Random;
 
 public class StableEnderP extends Item {
     public StableEnderP() {
-        super(new Properties().stacksTo(1).defaultDurability(CuprumConfigCommon.GENERAL.EnderDurability.get()).setNoRepair().tab(CreativeModeTab.TAB_MISC));
-
+        super(new Properties().stacksTo(1).setNoRepair().tab(CreativeModeTab.TAB_MISC).tab(FinalRegistry.CUPRUM));
+//.defaultDurability(CuprumConfigCommon.GENERAL.EnderDurability.get())
     }
 
     @Override
@@ -35,11 +36,11 @@ public class StableEnderP extends Item {
         pLevel.addFreshEntity(entity);
 
 
-        int dmgValue = stack.getDamageValue() + 1;
-        stack.setDamageValue(dmgValue);
-        if (dmgValue == stack.getMaxDamage()) {
-            pPlayer.getItemInHand(pUsedHand).shrink(1);
-        }
+//        int dmgValue = stack.getDamageValue() + 1;
+//        stack.setDamageValue(dmgValue);
+//        if (dmgValue == stack.getMaxDamage()) {
+//            pPlayer.getItemInHand(pUsedHand).shrink(1);
+//        }
         return super.use(pLevel, pPlayer, pUsedHand);
     }
 

@@ -1,0 +1,6 @@
+{
+  "model": "cuprum:block/hepatizonblock.json",
+  "variants": {
+    "":    { "model": "cuprum:block/hepatizonblock" }
+  }
+}

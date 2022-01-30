@@ -1,3 +1,7 @@
 {
-  "item.cuprum.stableenderpearl": "Stable Ender Pearl"
+  "itemGroup.Cuprum": "Cuprum",
+  "item.cuprum.stableenderpearl": "Stable Ender Pearl",
+  "item.cuprum.test": "Test entity DON'T USE",
+  "item.cuprum.hepatizoningot": "Hepatizon Ingot",
+  "block.cuprum.hepatizonblock": "Block of Hepatizon"
 }

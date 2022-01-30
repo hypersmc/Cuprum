@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "CRC",
-    "RPR",
-    "CRC"
+    "HPH",
+    "PRP",
+    "HPH"
   ],
   "key": {
     "P": {
       "item": "minecraft:ender_pearl"
     },
-    "C": {
-      "item": "minecraft:copper_ingot"
+    "H": {
+      "item": "cuprum:hepatizoningot"
     },
     "R": {
       "item": "minecraft:redstone"

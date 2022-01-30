@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "down": "cuprum:hepatizon_block_texture",
+    "up": "cuprum:hepatizon_block_texture",
+    "north": "cuprum:hepatizon_block_texture",
+    "south": "cuprum:hepatizon_block_texture",
+    "east": "cuprum:hepatizon_block_texture",
+    "west": "cuprum:hepatizon_block_texture",
+    "particle": "cuprum:hepatizon_block_texture"
+  }
+}

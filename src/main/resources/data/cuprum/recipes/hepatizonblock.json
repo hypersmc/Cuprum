@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "HHH",
+    "HHH",
+    "HHH"
+  ],
+  "key": {
+    "H": {
+      "item": "cuprum:hepatizoningot"
+    }
+  },
+  "result": {
+    "item": "cuprum:hepatizonblock",
+    "count": 2
+  }
+}
