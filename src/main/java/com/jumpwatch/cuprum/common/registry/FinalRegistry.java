@@ -3,6 +3,7 @@ package com.jumpwatch.cuprum.common.registry;
 import com.jumpwatch.cuprum.common.Cuprum;
 import com.jumpwatch.cuprum.common.blocks.Hepatizonblock;
 import com.jumpwatch.cuprum.common.entities.testEntity;
+import com.jumpwatch.cuprum.common.items.Chargedprism;
 import com.jumpwatch.cuprum.common.items.Hepatizoningot;
 import com.jumpwatch.cuprum.common.items.StableEnderP;
 import com.jumpwatch.cuprum.common.utils.ThrownStableEnderpearl;
@@ -62,7 +63,7 @@ public class FinalRegistry {
     public static final RegistryObject<Item> Stable_Ender_Pearl = ITEMS.register("stableenderpearl", () -> new StableEnderP());
     public static final RegistryObject<Item> Hepatizon_ingot = ITEMS.register("hepatizoningot", () -> new Hepatizoningot());
     public static final RegistryObject<Item> Hepatizon_block_item = fromBlock(Hepatizon_block);
-
+    public static final RegistryObject<Item> Charged_prism = ITEMS.register("chargedprisunstable", () -> new Chargedprism());
 
     //BlockEntities
 
