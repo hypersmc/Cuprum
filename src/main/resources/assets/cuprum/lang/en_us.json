@@ -3,5 +3,8 @@
   "item.cuprum.stableenderpearl": "Stable Ender Pearl",
   "item.cuprum.test": "Test entity DON'T USE",
   "item.cuprum.hepatizoningot": "Hepatizon Ingot",
-  "block.cuprum.hepatizonblock": "Block of Hepatizon"
+  "item.cuprum.chargedprisunstable": "Unstable charged prism",
+  "block.cuprum.hepatizonblock": "Block of Hepatizon",
+  "tooltip.cuprum.chargedprismunstable_shift": "&6&lWARNING &R&4Don't drop Unstable prism",
+  "tooltip.cuprum.chargedprismunstable": "\\u00A77Hold \\u00A7l\\u00A74SHIFT\\u00A7r \\u00A77For more information"
 }
